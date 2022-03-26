@@ -1,0 +1,15 @@
+CREATE DATABASE `socials`;
+USE `socials`;
+CREATE TABLE `users` (
+	`id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(255) NOT NULL,
+	`email` VARCHAR(255) NOT NULL,
+    `mobile_no` varchar(11) NOT NULL,
+	`gender` VARCHAR(50) NOT NULL,
+	`birthdate` TIMESTAMP NOT NULL,
+	`age` INT(11) NOT NULL,
+	`created_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+	`updated_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	PRIMARY KEY (`id`),
+	UNIQUE INDEX `users_email_unique` (`email`)
+);
